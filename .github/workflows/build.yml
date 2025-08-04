@@ -24,8 +24,11 @@ jobs:
             
         export PINO_HOME='/tmp/pino-toolchain'
         export PATH="${PINO_HOME}/bin:${PATH}"
-            
-        export PINO_STATIC='0'    
+        
+        echo 'PINO_HOME=/tmp/pino' >> "${GITHUB_ENV}"
+        echo 'PINO_STATIC=0' >> "${GITHUB_ENV}"
+        
+        echo '/tmp/pino/bin' >> "${GITHUB_PATH}"
     - name: Build prebuilts
       run: |
         bash 'main.sh'
