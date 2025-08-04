@@ -30,4 +30,6 @@ for triplet in "${targets[@]}"; do
 	
 	tar --create --file=- 'libpino-'* | xz --compress -9 > "${tarball_filename}"
 	sha256sum "${tarball_filename}" > "${tarball_filename}.sha256"
+	ls
+	rm --force './'*'.'{a,so,o}
 done
