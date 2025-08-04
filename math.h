@@ -1,5 +1,7 @@
 #include <sys/cdefs.h>
 
+__BEGIN_DECLS
+
 #if !__BIONIC_AVAILABILITY_GUARD(21)
 int isinf(double __x); 
 int isnan(double __x); 
@@ -63,5 +65,7 @@ long double fmaxl(long double __x, long double __y);
 long double fminl(long double __x, long double __y); 
 long double fmal(long double __x, long double __y, long double __z); 
 #endif /* __BIONIC_AVAILABILITY_GUARD(21) */
+
+__END_DECLS
 
 #pragma once

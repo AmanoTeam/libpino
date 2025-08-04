@@ -1,5 +1,7 @@
 #include <sys/cdefs.h>
 
+__BEGIN_DECLS
+
 #if !defined(complex)
 	#define complex _Complex
 #endif
@@ -173,5 +175,7 @@ double creal(double complex __z);
 float crealf(float complex __z); 
 long double creall(long double complex __z); 
 #endif /* __BIONIC_AVAILABILITY_GUARD(23) */
+
+__END_DECLS
 
 #pragma once
