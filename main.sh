@@ -11,7 +11,7 @@ declare -ra targets=(
 	'aarch64-unknown-linux-android21'
 )
 
-declare cflags='-O2 -fno-math-errno'
+declare cflags='-O2 -fno-math-errno -Xlinker --no-undefined'
 
 for triplet in "${targets[@]}"; do
 	declare name="${triplet::-2}"
