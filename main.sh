@@ -15,6 +15,7 @@ declare cflags='-O2 -fno-math-errno'
 
 for triplet in "${targets[@]}"; do
 	declare name="${triplet::-2}"
+	declare tarball_filename="${name}.tar.xz"
 	
 	"${triplet}-gcc" -g -c ${cflags} 'math.c'
 	"${triplet}-ar" rcs 'libpino-math.a' 'math.o'
@@ -25,4 +26,7 @@ for triplet in "${targets[@]}"; do
 	"${triplet}-ar" rcs 'libpino-mman.a' 'mmap64.o'
 	
 	"${triplet}-gcc" -shared 'mmap64.o' -o 'libpino-mman.so'
+	
+	tar --directory='/tmp' --create --file=- 'libpino-'* | xz --compress -9 > "${tarball_filename}"
+	sha256sum "${tarball_filename}" > "${tarball_filename}.sha256"
 done
