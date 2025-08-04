@@ -151,53 +151,25 @@ long double complex cpowl(long double complex __x, long double complex __z);
 #if !__BIONIC_AVAILABILITY_GUARD(23)
 double complex csqrt(double complex __z); 
 float complex csqrtf(float complex __z); 
-#endif /* __BIONIC_AVAILABILITY_GUARD(23) */
-
-#if !__BIONIC_AVAILABILITY_GUARD(26)
 long double complex csqrtl(long double complex __z); 
-#endif /* __BIONIC_AVAILABILITY_GUARD(26) */
 
-#if !__BIONIC_AVAILABILITY_GUARD(23)
 double carg(double complex __z); 
 float cargf(float complex __z); 
-#endif /* __BIONIC_AVAILABILITY_GUARD(23) */
-
-#if !__BIONIC_AVAILABILITY_GUARD(26)
 long double cargl(long double complex __z); 
-#endif /* __BIONIC_AVAILABILITY_GUARD(26) */
 
-#if !__BIONIC_AVAILABILITY_GUARD(23)
 double cimag(double complex __z); 
 float cimagf(float complex __z); 
-#endif /* __BIONIC_AVAILABILITY_GUARD(23) */
-
-#if !__BIONIC_AVAILABILITY_GUARD(26)
 long double cimagl(long double complex __z); 
-#endif /* __BIONIC_AVAILABILITY_GUARD(26) */
 
-#if !__BIONIC_AVAILABILITY_GUARD(23)
 double complex conj(double complex __z); 
 float complex conjf(float complex __z); 
-#endif /* __BIONIC_AVAILABILITY_GUARD(23) */
-
-#if !__BIONIC_AVAILABILITY_GUARD(26)
 long double complex conjl(long double complex __z); 
-#endif /* __BIONIC_AVAILABILITY_GUARD(26) */
 
-#if !__BIONIC_AVAILABILITY_GUARD(23)
 double complex cproj(double complex __z); 
 float complex cprojf(float complex __z); 
-#endif /* __BIONIC_AVAILABILITY_GUARD(23) */
-
-#if !__BIONIC_AVAILABILITY_GUARD(26)
 long double complex cprojl(long double complex __z); 
-#endif /* __BIONIC_AVAILABILITY_GUARD(26) */
 
-#if !__BIONIC_AVAILABILITY_GUARD(23)
 double creal(double complex __z); 
 float crealf(float complex __z); 
-#endif /* __BIONIC_AVAILABILITY_GUARD(23) */
-
-#if !__BIONIC_AVAILABILITY_GUARD(26)
 long double creall(long double complex __z); 
-#endif /* __BIONIC_AVAILABILITY_GUARD(26) */
+#endif /* __BIONIC_AVAILABILITY_GUARD(23) */

@@ -522,15 +522,11 @@ double complex csqrt(double complex __z) {
 float complex csqrtf(float complex __z) { 
 	return __builtin_csqrtf(__z);
 }
-#endif /* __BIONIC_AVAILABILITY_GUARD(23) */
 
-#if !__BIONIC_AVAILABILITY_GUARD(26)
 long double complex csqrtl(long double complex __z) { 
 	return __builtin_csqrtl(__z);
 }
-#endif /* __BIONIC_AVAILABILITY_GUARD(26) */
 
-#if !__BIONIC_AVAILABILITY_GUARD(23)
 double carg(double complex __z) { 
 	return __builtin_carg(__z);
 }
@@ -538,15 +534,11 @@ double carg(double complex __z) {
 float cargf(float complex __z) { 
 	return __builtin_cargf(__z);
 }
-#endif /* __BIONIC_AVAILABILITY_GUARD(23) */
 
-#if !__BIONIC_AVAILABILITY_GUARD(26)
 long double cargl(long double complex __z) { 
 	return __builtin_cargl(__z);
 }
-#endif /* __BIONIC_AVAILABILITY_GUARD(26) */
 
-#if !__BIONIC_AVAILABILITY_GUARD(23)
 double cimag(double complex __z) { 
 	return __builtin_cimag(__z);
 }
@@ -554,15 +546,11 @@ double cimag(double complex __z) {
 float cimagf(float complex __z) { 
 	return __builtin_cimagf(__z);
 }
-#endif /* __BIONIC_AVAILABILITY_GUARD(23) */
 
-#if !__BIONIC_AVAILABILITY_GUARD(26)
 long double cimagl(long double complex __z) { 
 	return __builtin_cimagl(__z);
 }
-#endif /* __BIONIC_AVAILABILITY_GUARD(26) */
 
-#if !__BIONIC_AVAILABILITY_GUARD(23)
 double complex conj(double complex __z) { 
 	return __builtin_conj(__z);
 }
@@ -570,15 +558,11 @@ double complex conj(double complex __z) {
 float complex conjf(float complex __z) { 
 	return __builtin_conjf(__z);
 }
-#endif /* __BIONIC_AVAILABILITY_GUARD(23) */
 
-#if !__BIONIC_AVAILABILITY_GUARD(26)
 long double complex conjl(long double complex __z) { 
 	return __builtin_conjl(__z);
 }
-#endif /* __BIONIC_AVAILABILITY_GUARD(26) */
 
-#if !__BIONIC_AVAILABILITY_GUARD(23)
 double complex cproj(double complex __z) { 
 	return __builtin_cproj(__z);
 }
@@ -586,15 +570,11 @@ double complex cproj(double complex __z) {
 float complex cprojf(float complex __z) { 
 	return __builtin_cprojf(__z);
 }
-#endif /* __BIONIC_AVAILABILITY_GUARD(23) */
 
-#if !__BIONIC_AVAILABILITY_GUARD(26)
 long double complex cprojl(long double complex __z) { 
 	return __builtin_cprojl(__z);
 }
-#endif /* __BIONIC_AVAILABILITY_GUARD(26) */
 
-#if !__BIONIC_AVAILABILITY_GUARD(23)
 double creal(double complex __z) { 
 	return __builtin_creal(__z);
 }
@@ -602,10 +582,8 @@ double creal(double complex __z) {
 float crealf(float complex __z) { 
 	return __builtin_crealf(__z);
 }
-#endif /* __BIONIC_AVAILABILITY_GUARD(23) */
 
-#if !__BIONIC_AVAILABILITY_GUARD(26)
 long double creall(long double complex __z) { 
 	return __builtin_creall(__z);
 }
-#endif /* __BIONIC_AVAILABILITY_GUARD(26) */
+#endif /* __BIONIC_AVAILABILITY_GUARD(23) */
