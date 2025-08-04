@@ -27,6 +27,6 @@ for triplet in "${targets[@]}"; do
 	
 	"${triplet}-gcc" -shared 'mmap64.o' -o 'libpino-mman.so'
 	
-	tar --directory='/tmp' --create --file=- 'libpino-'* | xz --compress -9 > "${tarball_filename}"
+	tar --create --file=- 'libpino-'* | xz --compress -9 > "${tarball_filename}"
 	sha256sum "${tarball_filename}" > "${tarball_filename}.sha256"
 done
