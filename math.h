@@ -63,3 +63,5 @@ long double fmaxl(long double __x, long double __y);
 long double fminl(long double __x, long double __y); 
 long double fmal(long double __x, long double __y, long double __z); 
 #endif /* __BIONIC_AVAILABILITY_GUARD(21) */
+
+#pragma once

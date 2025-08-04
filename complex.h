@@ -173,3 +173,5 @@ double creal(double complex __z);
 float crealf(float complex __z); 
 long double creall(long double complex __z); 
 #endif /* __BIONIC_AVAILABILITY_GUARD(23) */
+
+#pragma once
