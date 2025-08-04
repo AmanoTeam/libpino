@@ -21,11 +21,11 @@ long double asinl(long double __x) {
 	return __builtin_asinl(__x);
 }
 
-static double atan2(double __y, double __x) { 
+double atan2(double __y, double __x) { 
 	return __builtin_atan2(__y, __x);
 }
 
-static float atan2f(float __y, float __x) { 
+float atan2f(float __y, float __x) { 
 	return __builtin_atan2f(__y, __x);
 }
 
