@@ -24,6 +24,8 @@ for triplet in "${targets[@]}"; do
 	
 	if [ "${name}" = 'mips64el-unknown-linux-android' ] || [ "${name}" = 'x86_64-unknown-linux-android' ] || [ "${name}" = 'riscv64-unknown-linux-android' ] || [ "${name}" = 'aarch64-unknown-linux-android' ]; then
 		ldflags="${ldflags64}"
+		unlink "${PINO_HOME}/${triplet}/lib/libm.so"
+		unlink "${PINO_HOME}/${triplet}/lib/static/libm.so"
 	fi
 	
 	"${triplet}-gcc" -g -c ${cflags} 'math.c'
