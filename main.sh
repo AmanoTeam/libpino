@@ -30,14 +30,14 @@ for triplet in "${targets[@]}"; do
 	
 	"${triplet}-gcc" -g -c ${cflags} 'math.c'
 	"${triplet}-ar" rcs 'libpino-math.a' 'math.o'
-	echo "${triplet}-gcc" ${ldflags} -shared 'math.o' -o 'libpino-math.so'
-	"${triplet}-gcc" ${ldflags} -shared 'math.o' -o 'libpino-math.so'
+	
+	"${triplet}-gcc" 'math.o' ${ldflags} -shared -o 'libpino-math.so'
 	
 	if [ "${name}" = 'i686-unknown-linux-android' ] || [ "${name}" = 'armv7-unknown-linux-androideabi' ] || [ "${name}" = 'armv5-unknown-linux-androideabi' ] || [ "${name}" = 'mipsel-unknown-linux-android' ]; then
 		"${triplet}-gcc" -g -c ${cflags} 'mmap64.c'
 		"${triplet}-ar" rcs 'libpino-mman.a' 'mmap64.o'
 		
-		"${triplet}-gcc" ${ldflags} -shared 'mmap64.o' -o 'libpino-mman.so'
+		"${triplet}-gcc" ${ldflags} 'mmap64.o' -shared -o 'libpino-mman.so'
 	fi
 	
 	tar --create --file=- 'libpino-'* | xz --compress -9 > "${tarball_filename}"
