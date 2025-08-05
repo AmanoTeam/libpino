@@ -30,7 +30,7 @@ for triplet in "${targets[@]}"; do
 	
 	"${triplet}-gcc" -g -c ${cflags} 'math.c'
 	"${triplet}-ar" rcs 'libpino-math.a' 'math.o'
-	
+	echo "${triplet}-gcc" ${ldflags} -shared 'math.o' -o 'libpino-math.so'
 	"${triplet}-gcc" ${ldflags} -shared 'math.o' -o 'libpino-math.so'
 	
 	if [ "${name}" = 'i686-unknown-linux-android' ] || [ "${name}" = 'armv7-unknown-linux-androideabi' ] || [ "${name}" = 'armv5-unknown-linux-androideabi' ] || [ "${name}" = 'mipsel-unknown-linux-android' ]; then
